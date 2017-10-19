@@ -92,7 +92,27 @@ public class SuggestedChannels {
                     .setMediaUrl("http://cdn-fms.rbs.com.br/hls-vod/sample1_1500kbps.f4v.m3u8")
                     .setName("Artbeats Demo")
                     .setNumber("900")
-                    .build()
+                    .build(),
+            new JsonChannel.Builder()
+                  .setGenres(TvContract.Programs.Genres.ARTS + "," +
+                TvContract.Programs.Genres.ENTERTAINMENT)
+            .setLogo("http://content.provideocoalition.com/uploads/ArtbeatsLogo_blackbox." +
+                "jpg")
+            .setMediaUrl("http://portal.inservice4u.com:8080/live/antocara/ZlzEu22A7L/1052.ts")
+            .setName("AXN HD ES")
+            .setNumber("900")
+            .build(),
+        new JsonChannel.Builder()
+            .setGenres(TvContract.Programs.Genres.ARTS + "," +
+                TvContract.Programs.Genres.ENTERTAINMENT)
+            .setLogo("http://i.imgur.com/QRCIhN4.png")
+            .setMediaUrl("http://portal.inservice4u.com:8080/live/antocara/ZlzEu22A7L/6069.ts")
+            .setName("LIGA")
+            .setNumber("900")
+            .build()
+
+
+
     };
 
     public static CumulusChannel[] getSuggestedChannels() {

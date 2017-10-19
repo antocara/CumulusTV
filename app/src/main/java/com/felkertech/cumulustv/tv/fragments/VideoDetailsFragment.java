@@ -3,7 +3,6 @@ package com.felkertech.cumulustv.tv.fragments;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.media.tv.TvContract;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,25 +19,19 @@ import android.support.v17.leanback.widget.ListRowPresenter;
 import android.support.v17.leanback.widget.OnActionClickedListener;
 import android.util.DisplayMetrics;
 import android.util.Log;
-
 import com.bumptech.glide.Glide;
-import com.felkertech.cumulustv.utils.ActivityUtils;
-import com.felkertech.n.cumulustv.R;
 import com.felkertech.cumulustv.activities.MainActivity;
 import com.felkertech.cumulustv.model.ChannelDatabase;
 import com.felkertech.cumulustv.model.JsonChannel;
 import com.felkertech.cumulustv.tv.Utils;
 import com.felkertech.cumulustv.tv.activities.DetailsActivity;
-import com.felkertech.cumulustv.tv.activities.LeanbackActivity;
 import com.felkertech.cumulustv.tv.presenters.DetailsDescriptionPresenter;
+import com.felkertech.n.cumulustv.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.drive.Drive;
-
-import org.json.JSONException;
-
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
+import org.json.JSONException;
 
 /*
  * LeanbackDetailsFragment extends DetailsFragment, a Wrapper fragment for leanback details screens.
@@ -193,30 +186,33 @@ public class VideoDetailsFragment extends DetailsFragment
         detailsPresenter.setOnActionClickedListener(new OnActionClickedListener() {
             @Override
             public void onActionClicked(Action action) {
-                if(action.getId() == ACTION_EDIT) {
-                    ActivityUtils.editChannel(getActivity(), jsonChannel.getMediaUrl());
-                } else if(action.getId() == ACTION_WATCH) {
-                    Log.d(TAG, ChannelDatabase.getInstance(getActivity()).getHashMap().toString());
-                    if (ChannelDatabase.getInstance(getActivity()).getHashMap()
-                            .containsKey(jsonChannel.getMediaUrl())) {
-                        // Open in Live Channels
-                        Uri liveChannelsUri =
-                                TvContract.buildChannelUri(
-                                        ChannelDatabase.getInstance(
-                                                getActivity()).getHashMap()
-                                                .get(jsonChannel.getMediaUrl()));
-                        getActivity().startActivity(
-                                new Intent(Intent.ACTION_VIEW, liveChannelsUri));
-                    } else {
-                        ActivityUtils.openStream(getActivity(), jsonChannel.getMediaUrl());
-                    }
-                } else if(action.getId() == ACTION_ADD) {
-                    Log.d(TAG, "Adding " + jsonChannel.toString());
-                    ActivityUtils
-                            .addChannel(getActivity(), gapi, jsonChannel);
-                    getActivity().setResult(LeanbackActivity.RESULT_CODE_REFRESH_UI);
-                    getActivity().finish();
-                }
+                openVlc(jsonChannel.getMediaUrl());
+                //if(action.getId() == ACTION_EDIT) {
+                //    ActivityUtils.editChannel(getActivity(), jsonChannel.getMediaUrl());
+                //} else if(action.getId() == ACTION_WATCH) {
+                //    Log.d(TAG, ChannelDatabase.getInstance(getActivity()).getHashMap().toString());
+                //
+                //
+                //    if (ChannelDatabase.getInstance(getActivity()).getHashMap()
+                //            .containsKey(jsonChannel.getMediaUrl())) {
+                //        // Open in Live Channels
+                //        Uri liveChannelsUri =
+                //                TvContract.buildChannelUri(
+                //                        ChannelDatabase.getInstance(
+                //                                getActivity()).getHashMap()
+                //                                .get(jsonChannel.getMediaUrl()));
+                //        getActivity().startActivity(
+                //                new Intent(Intent.ACTION_VIEW, liveChannelsUri));
+                //    } else {
+                //        ActivityUtils.openStream(getActivity(), jsonChannel.getMediaUrl());
+                //    }
+                //} else if(action.getId() == ACTION_ADD) {
+                //    Log.d(TAG, "Adding " + jsonChannel.toString());
+                //    ActivityUtils
+                //            .addChannel(getActivity(), gapi, jsonChannel);
+                //    getActivity().setResult(LeanbackActivity.RESULT_CODE_REFRESH_UI);
+                //    getActivity().finish();
+                //}
             }
         });
         mPresenterSelector.addClassPresenter(DetailsOverviewRow.class, detailsPresenter);
@@ -239,5 +235,17 @@ public class VideoDetailsFragment extends DetailsFragment
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
+    }
+
+    private void openVlc(String url){
+        int vlcRequestCode = 42;
+        Uri uri = Uri.parse(url);
+        Intent vlcIntent = new Intent(Intent.ACTION_VIEW);
+        vlcIntent.setPackage("org.videolan.vlc");
+        vlcIntent.setDataAndTypeAndNormalize(uri, "video/*");
+        vlcIntent.putExtra("title", "Kung Fury");
+        vlcIntent.putExtra("from_start", false);
+        vlcIntent.putExtra("position", 90000l);
+        startActivityForResult(vlcIntent, vlcRequestCode);
     }
 }
