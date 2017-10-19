@@ -7,8 +7,8 @@ import android.media.tv.TvContract;
 import android.net.Uri;
 
 import com.felkertech.cumulustv.plugins.CumulusChannel;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.commons.model.ChannelDatabase;
+import com.felkertech.commons.model.JsonChannel;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 
 import junit.framework.Assert;

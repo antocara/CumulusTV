@@ -2,7 +2,7 @@ package com.felkertech.cumulustv;
 
 import android.content.Context;
 
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.commons.model.ChannelDatabase;
 import com.felkertech.settingsmanager.SettingsManager;
 
 import org.json.JSONException;

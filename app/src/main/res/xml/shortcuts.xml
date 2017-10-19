@@ -9,7 +9,7 @@
         <intent
             android:action="ADD"
             android:targetPackage="com.felkertech.n.cumulustv"
-            android:targetClass="com.felkertech.cumulustv.plugins.MainPicker" />
+            android:targetClass="com.felkertech.commons.plugins.MainPicker" />
         <!-- If your shortcut is associated with multiple intents, include them
              here. The last intent in the list determines what the user sees when
              they launch this shortcut. -->

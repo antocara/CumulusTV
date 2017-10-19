@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.widget.Toast;
 
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
-import com.felkertech.cumulustv.services.CumulusDreams;
+import com.felkertech.commons.utils.DriveSettingsManager;
+import com.felkertech.commons.services.CumulusDreams;
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.commons.model.ChannelDatabase;
 
 import org.json.JSONException;
 

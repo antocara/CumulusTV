@@ -1,17 +1,14 @@
 package com.felkertech.cumulustv.fragments;
 
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.media.tv.TvContract;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v17.preference.LeanbackPreferenceFragment;
@@ -25,14 +22,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
 
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.services.CumulusJobService;
+import com.felkertech.commons.model.ChannelDatabase;
 import com.felkertech.cumulustv.tv.CumulusTvTifService;
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.commons.utils.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
 import com.google.android.media.tv.companionlibrary.BaseTvInputService;
 import com.google.android.media.tv.companionlibrary.model.Channel;
-import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
 
 import org.json.JSONException;
 

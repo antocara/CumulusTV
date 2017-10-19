@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.RemoteViews;
 
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.commons.model.ChannelDatabase;
+import com.felkertech.commons.model.JsonChannel;
 import com.felkertech.cumulustv.widgets.ChannelShortcut;
 import com.felkertech.settingsmanager.SettingsManager;
 

@@ -7,9 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.felkertech.cumulustv.utils.ActivityUtils;
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
-import com.felkertech.cumulustv.utils.PermissionUtils;
+import com.felkertech.commons.utils.ActivityUtils;
+import com.felkertech.commons.utils.DriveSettingsManager;
+import com.felkertech.commons.utils.PermissionUtils;
 import com.felkertech.n.cumulustv.R;
 import com.github.paolorotolo.appintro.AppIntro2;
 

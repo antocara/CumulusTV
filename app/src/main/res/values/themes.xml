@@ -17,4 +17,11 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:colorPrimary" tools:targetApi="lollipop">@color/colorPrimary</item>
     </style>
+
+
+    <style name="Theme.Panel" parent="@android:style/Theme.Material.Panel">
+        <item name="android:windowElevation">@dimen/side_panel_elevation</item>
+        <item name="android:windowBackground">@color/side_panel_background</item>
+        <item name="android:windowAnimationStyle">@style/side_panel_animation</item>
+    </style>
 </resources>

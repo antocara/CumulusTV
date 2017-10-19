@@ -1,24 +1,17 @@
 package com.felkertech.cumulustv.test;
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.database.Cursor;
 import android.media.tv.TvContract;
-import android.net.Uri;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
-import android.util.Log;
 
 import com.felkertech.cumulustv.activities.MainActivity;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.commons.model.ChannelDatabase;
+import com.felkertech.commons.model.JsonChannel;
 import com.felkertech.cumulustv.fileio.XmlTvParser;
-import com.felkertech.cumulustv.services.CumulusJobService;
-import com.felkertech.n.cumulustv.R;
-import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
+import com.felkertech.commons.services.CumulusJobService;
 import com.google.android.media.tv.companionlibrary.model.Program;
 
 import junit.framework.Assert;
@@ -28,11 +21,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.io.BufferedInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Tests the ability to pull program data out of an Xmltv file and correctly insert it into the

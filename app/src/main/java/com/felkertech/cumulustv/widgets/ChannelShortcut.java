@@ -14,13 +14,12 @@ import android.widget.RemoteViews;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.Target;
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.commons.model.ChannelDatabase;
 import com.felkertech.n.cumulustv.R;
 import com.felkertech.cumulustv.activities.CumulusVideoPlayback;
 import com.felkertech.cumulustv.activities.WidgetSelectionActivity;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.commons.model.JsonChannel;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 /**

@@ -63,7 +63,7 @@
 
         <!-- Plugin -->
         <activity
-            android:name="com.felkertech.cumulustv.plugins.MainPicker"
+            android:name="com.felkertech.commons.plugins.MainPicker"
             android:enabled="true"
             android:exported="true"
             android:label="Create a Channel"
@@ -162,7 +162,7 @@
         </activity>
 
         <receiver
-            android:name="com.felkertech.cumulustv.plugins.DataReceiver"
+            android:name="com.felkertech.commons.plugins.DataReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -178,27 +178,27 @@
             android:name="com.felkertech.cumulustv.Intro.Intro"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <activity
-            android:name="com.felkertech.cumulustv.tv.activities.LeanbackActivity"
-            android:label="@string/app_name"
-            android:exported="true"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.Leanback">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!--<activity-->
+            <!--android:name="com.felkertech.cumulustv.tv.activities.LeanbackActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:exported="true"-->
+            <!--android:screenOrientation="landscape"-->
+            <!--android:theme="@style/Theme.Leanback">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LEANBACK_LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
 
-        <activity
-            android:name="com.felkertech.cumulustv.tv.activities.DetailsActivity"
-            android:theme="@style/Theme.Leanback" />
+        <!--<activity-->
+            <!--android:name="com.felkertech.cumulustv.tv.activities.DetailsActivity"-->
+            <!--android:theme="@style/Theme.Leanback" />-->
 
         <!-- This service is only used on devices with API v17+ -->
         <activity android:name="com.felkertech.cumulustv.activities.CumulusDreamsSettingsActivity" />
 
         <service
-            android:name="com.felkertech.cumulustv.services.CumulusDreams"
+            android:name="com.felkertech.commons.services.CumulusDreams"
             android:permission="android.permission.BIND_DREAM_SERVICE"
             android:exported="true">
             <intent-filter>
@@ -212,16 +212,16 @@
                 android:resource="@xml/cumulus_dreams_info" />
         </service>
 
-        <activity android:name="com.felkertech.cumulustv.tv.activities.PlaybackQuickSettingsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Panel"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+        <!--<activity android:name="com.felkertech.cumulustv.tv.activities.PlaybackQuickSettingsActivity"-->
+            <!--android:exported="true"-->
+            <!--android:theme="@style/Theme.Panel"-->
+            <!--android:enabled="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
 
-        <activity android:name="com.felkertech.cumulustv.activities.HomepageWebViewActivity" />
+        <!--<activity android:name="com.felkertech.cumulustv.activities.HomepageWebViewActivity" />-->
 
         <receiver android:name="com.felkertech.cumulustv.widgets.ChannelShortcut"
             android:enabled="true"
@@ -248,36 +248,36 @@
             android:theme="@style/CompatTheme"
             android:exported="true" />
 
-        <service android:name="com.felkertech.cumulustv.services.CumulusJobService"
+        <service android:name="com.felkertech.commons.services.CumulusJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:enabled="true" />
 
-        <receiver android:name="com.felkertech.cumulustv.receivers.TvBootReceiver"
+        <receiver android:name="com.felkertech.commons.receivers.TvBootReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.felkertech.cumulustv.tv.activities.TifSetupActivity"
-            android:enabled="true"
-            android:exported="true" />
+        <!--<activity android:name="com.felkertech.cumulustv.tv.activities.TifSetupActivity"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true" />-->
 
-        <service
-            android:name="com.felkertech.cumulustv.tv.CumulusTvTifService"
-            android:label="@string/app_name"
-            android:icon="@mipmap/ic_launcher"
-            android:permission="android.permission.BIND_TV_INPUT">
-            <!-- Required filter used by the system to launch our account service. -->
-            <intent-filter>
-                <action android:name="android.media.tv.TvInputService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.media.tv.input"
-                android:resource="@xml/tv_service" />
-        </service>
+        <!--<service-->
+            <!--android:name="com.felkertech.cumulustv.tv.CumulusTvTifService"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:icon="@mipmap/ic_launcher"-->
+            <!--android:permission="android.permission.BIND_TV_INPUT">-->
+            <!--&lt;!&ndash; Required filter used by the system to launch our account service. &ndash;&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.media.tv.TvInputService" />-->
+            <!--</intent-filter>-->
+            <!--<meta-data-->
+                <!--android:name="android.media.tv.input"-->
+                <!--android:resource="@xml/tv_service" />-->
+        <!--</service>-->
 
-        <activity android:name="com.felkertech.cumulustv.plugins.ListingPlugin"
+        <activity android:name="com.felkertech.commons.plugins.ListingPlugin"
             android:theme="@style/CompatTheme"
             android:label="@string/add_jsonlisting"
             android:enabled="true"
@@ -321,7 +321,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.felkertech.cumulustv.plugins.JsonListingPanelActivity"
+        <activity android:name="com.felkertech.commons.plugins.JsonListingPanelActivity"
             android:exported="true"
             android:theme="@style/Theme.Panel"
             android:enabled="true">

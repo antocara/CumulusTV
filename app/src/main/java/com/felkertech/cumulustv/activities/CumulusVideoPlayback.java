@@ -15,16 +15,14 @@ import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.Target;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
-import com.felkertech.cumulustv.player.CumulusTvPlayer;
-import com.felkertech.cumulustv.player.CumulusWebPlayer;
-import com.felkertech.cumulustv.player.MediaSourceFactory;
+import com.felkertech.commons.model.ChannelDatabase;
+import com.felkertech.commons.model.JsonChannel;
+import com.felkertech.commons.player.CumulusTvPlayer;
+import com.felkertech.commons.player.CumulusWebPlayer;
+import com.felkertech.commons.player.MediaSourceFactory;
 import com.felkertech.n.cumulustv.R;
-
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
@@ -37,7 +35,7 @@ public class CumulusVideoPlayback extends AppCompatActivity {
     private String urlStream;
     private VideoView myVideoView;
     public static final String KEY_VIDEO_URL = "VIDEO_URL";
-    private com.felkertech.cumulustv.player.CumulusTvPlayer mTvPlayer;
+    private com.felkertech.commons.player.CumulusTvPlayer mTvPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

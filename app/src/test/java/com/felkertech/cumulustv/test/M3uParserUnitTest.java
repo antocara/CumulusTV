@@ -3,10 +3,8 @@ package com.felkertech.cumulustv.test;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
-import com.felkertech.cumulustv.fileio.M3uParser;
+import com.felkertech.commons.fileio.M3uParser;
 import com.felkertech.n.cumulustv.BuildConfig;
-
-import junit.framework.TestCase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
