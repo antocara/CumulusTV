@@ -1,71 +1,47 @@
 package com.felkertech.cumulustv.Intro;
 
-import android.Manifest;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.view.KeyEvent;
-import android.view.View;
-
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import com.felkertech.cumulustv.managers.NavigationManager;
 import com.felkertech.cumulustv.utils.ActivityUtils;
 import com.felkertech.cumulustv.utils.DriveSettingsManager;
-import com.felkertech.cumulustv.utils.PermissionUtils;
 import com.felkertech.n.cumulustv.R;
-import com.github.paolorotolo.appintro.AppIntro2;
+import com.github.paolorotolo.appintro.AppIntro;
 
-/**
- * Created by N on 7/1/2015.
- */
-public class Intro extends AppIntro2 {
-    @Override
-    public void init(Bundle savedInstanceState) {
-        addSlide(new FirstSlide());
-        addSlide(new SecondSlide());
-        addSlide(new SecondOneSlide());
-        addSlide(new ThirdSlide());
-        addSlide(new FourthSlide());
-        setFadeAnimation();
-    }
+public class Intro extends AppIntro {
 
-    @Override
-    public void selectDot(int index) {
-        super.selectDot(index);
-    }
+  @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-    private void loadMainActivity(){
-        DriveSettingsManager sm = new DriveSettingsManager(this);
-        sm.setInt(R.string.sm_last_version, ActivityUtils.LAST_GOOD_BUILD);
-        Intent intent = new Intent(this, ActivityUtils.getMainActivity(this));
-        startActivity(intent);
-    }
+    addSlide(new FirstSlide());
+    addSlide(new SecondSlide());
+    addSlide(new SecondOneSlide());
+    addSlide(new ThirdSlide());
+    addSlide(new FourthSlide());
+    setFadeAnimation();
+  }
 
-    @Override
-    public void onDonePressed() {
-        loadMainActivity();
-    }
+  private void loadMainActivity() {
+    DriveSettingsManager sm = new DriveSettingsManager(this);
+    sm.setInt(R.string.sm_last_version, ActivityUtils.LAST_GOOD_BUILD);
+    NavigationManager.navigateToMainActivity(this);
+  }
 
-    public void getStarted(View v){
-        loadMainActivity();
-    }
+  @Override public void onSkipPressed(Fragment currentFragment) {
+    super.onSkipPressed(currentFragment);
+    // Do something when users tap on Skip button.
+    loadMainActivity();
+  }
 
-    @Override
-    public boolean onKeyDown(int code, KeyEvent kvent) {
-        if(code == KeyEvent.KEYCODE_DPAD_CENTER) {
-            ViewPager vp = (ViewPager)this.findViewById(com.github.paolorotolo.appintro.R.id.view_pager);
-            if(vp.getCurrentItem() == vp.getAdapter().getCount()-1) {
-                onDonePressed();
-            } else {
-                vp.setCurrentItem(vp.getCurrentItem()+1);
-            }
-            return false;
-        }
-        return super.onKeyDown(code, kvent);
-    }
+  @Override public void onDonePressed(Fragment currentFragment) {
+    super.onDonePressed(currentFragment);
+    loadMainActivity();
+  }
 
-    @Override
-    public void onDotSelected(int index) {
-        if(index == 3) {
-            PermissionUtils.requestPermissionIfDisabled(this, Manifest.permission_group.STORAGE, getString(R.string.permission_storage_rationale));
-        }
-    }
+  @Override
+  public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
+    super.onSlideChanged(oldFragment, newFragment);
+    // Do something when the slide changes.
+  }
 }

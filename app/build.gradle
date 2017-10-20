@@ -66,17 +66,26 @@ dependencies {
     compile 'com.android.support:customtabs:25.1.0'
     compile 'com.android.support:palette-v7:25.1.0'
     compile 'com.android.support:preference-leanback-v17:25.1.0'
-    androidTestCompile 'com.android.support:support-annotations:25.1.0'
+
 
     compile 'com.google.android.gms:play-services-drive:10.0.0'
     compile 'com.pnikosis:materialish-progress:1.5'
-    compile 'com.github.paolorotolo:appintro:3.2.0'
+    //Wizard intro
+    compile 'com.github.paolorotolo:appintro:v4.2.2'
+    //http connect
     compile 'com.squareup.okhttp:okhttp:2.4.0'
+    //image manager
     compile 'com.github.bumptech.glide:glide:3.7.0'
+
     compile 'com.github.fleker:settingsmanager:1.3.5'
-    // In alpha
+    //Input TV
     compile 'com.google.android.media.tv:companionlibrary:1.0.1'
     compile 'com.google.android.exoplayer:exoplayer:r2.2.0'
+    //view injection
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //test
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'

@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.tv;
+package com.felkertech.cumulustv.tv.tvinputservice;
 
 import android.annotation.TargetApi;
 import android.content.ComponentName;
@@ -40,7 +40,6 @@ import com.google.android.media.tv.companionlibrary.model.RecordedProgram;
 import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
 import com.pnikosis.materialishprogress.ProgressWheel;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 
@@ -117,7 +116,7 @@ public class CumulusTvTifService extends BaseTvInputService {
                         Log.w(TAG, "Cannot find channel");
                     }
                     ((TextView) v.findViewById(R.id.channel)).setText("");
-                    ((TextView) v.findViewById(R.id.title)).setText("");
+                    ((TextView) v.findViewById(R.id.intro_title)).setText("");
                 } else if (isWeb) {
                     CumulusWebPlayer wv = new CumulusWebPlayer(getApplicationContext(),
                             new CumulusWebPlayer.WebViewListener() {
@@ -140,7 +139,7 @@ public class CumulusTvTifService extends BaseTvInputService {
                         Log.d(TAG, "Manually create a splashscreen");
                     }
                     ((TextView) v.findViewById(R.id.channel)).setText(jsonChannel.getNumber());
-                    ((TextView) v.findViewById(R.id.title)).setText(jsonChannel.getName());
+                    ((TextView) v.findViewById(R.id.intro_title)).setText(jsonChannel.getName());
                     if (!jsonChannel.getLogo().isEmpty()) {
                         final Bitmap[] bitmap = {null};
                         new Thread(new Runnable() {
@@ -162,7 +161,7 @@ public class CumulusTvTifService extends BaseTvInputService {
                                             v.setBackgroundColor(s.getRgb());
                                             ((TextView) v.findViewById(R.id.channel))
                                                     .setTextColor(s.getTitleTextColor());
-                                            ((TextView) v.findViewById(R.id.title))
+                                            ((TextView) v.findViewById(R.id.intro_title))
                                                     .setTextColor(s.getTitleTextColor());
                                             ((TextView) v.findViewById(R.id.channel_msg))
                                                     .setTextColor(s.getTitleTextColor());
@@ -180,7 +179,7 @@ public class CumulusTvTifService extends BaseTvInputService {
                                             v.setBackgroundColor(s.getRgb());
                                             ((TextView) v.findViewById(R.id.channel))
                                                     .setTextColor(s.getTitleTextColor());
-                                            ((TextView) v.findViewById(R.id.title))
+                                            ((TextView) v.findViewById(R.id.intro_title))
                                                     .setTextColor(s.getTitleTextColor());
                                             ((TextView) v.findViewById(R.id.channel_msg))
                                                     .setTextColor(s.getTitleTextColor());
@@ -197,7 +196,7 @@ public class CumulusTvTifService extends BaseTvInputService {
                                             v.setBackgroundColor(s.getRgb());
                                             ((TextView) v.findViewById(R.id.channel))
                                                     .setTextColor(s.getTitleTextColor());
-                                            ((TextView) v.findViewById(R.id.title))
+                                            ((TextView) v.findViewById(R.id.intro_title))
                                                     .setTextColor(s.getTitleTextColor());
                                             ((TextView) v.findViewById(R.id.channel_msg))
                                                     .setTextColor(s.getTitleTextColor());

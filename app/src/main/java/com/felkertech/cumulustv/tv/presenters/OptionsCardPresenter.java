@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.model.JsonChannel;
 import com.felkertech.cumulustv.model.Option;
 
 /**
@@ -40,7 +39,7 @@ public class OptionsCardPresenter extends CardPresenter {
         final Option option = (Option) item;
         final ImageCardView cardView = (ImageCardView) viewHolder.view;
         if (DEFAULT_BANNER) {
-            cardView.setMainImage(contextThemeWrapper.getDrawable(R.drawable.c_banner_3_2));
+            cardView.setMainImage(contextThemeWrapper.getDrawable(R.drawable.image_intro_1));
         } else {
             cardView.setMainImage(option.getDrawable());
         }

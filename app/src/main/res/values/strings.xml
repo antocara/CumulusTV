@@ -15,7 +15,6 @@
     <string name="intro_msg_2">You can create a JSON file on Google Drive and have your channels synced across all your devices.</string>
     <string name="intro_title_21">How to Sync</string>
     <string name="intro_msg_21">"-Create Syncable JSON File in Google Drive\n-Create a Channel\n-On your computer the file should show up.\n    You can add more channels here.\n-Save the file.\n-Data will automatically sync periodically."</string>
-    <!--Edits on your PC will also change them on this device, as long as you change the `modified` attribute.</string>-->
     <string name="intro_title_3">Report Problems</string>
     <string name="intro_msg_3">You can browse the source code on GitHub and report any issues you find or suggest a feature. Have a problem with the JSON? You can browse the format there.</string>
     <string name="intro_title_4">Get Started</string>

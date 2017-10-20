@@ -32,7 +32,7 @@
     <application>
 
         <activity
-            android:name="com.felkertech.cumulustv.activities.MainActivity"
+            android:name="com.felkertech.cumulustv.mainscreen.MainActivity"
             android:exported="true"
             android:label="CumulusTV">
             <intent-filter>

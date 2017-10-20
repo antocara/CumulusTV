@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.tv.fragments;
+package com.felkertech.cumulustv.tv.tvinputservice;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -20,7 +20,7 @@ import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
  * Fragment which shows a sample UI for registering channels and setting up SampleJobService to
  * provide program information in the background.
  */
-public class TifSetupFragment extends ChannelSetupFragment {
+public class TvInputServiceSetupFragment extends ChannelSetupFragment {
     public static final long FULL_SYNC_FREQUENCY_MILLIS = 1000 * 60 * 60 * 24;  // 24 hour
     private static final long FULL_SYNC_WINDOW_SEC = 1000 * 60 * 60 * 24 * 14;  // 2 weeks
 

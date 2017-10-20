@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v7.app.AlertDialog;
@@ -51,7 +50,7 @@ public class JsonListingPanelActivity extends Activity {
             getActionBar().hide();
         }
         setContentView(com.felkertech.n.cumulustv.R.layout.activity_quick_settings);
-        ((TextView) findViewById(R.id.title)).setText(getString(R.string.link_to_m3u));
+        ((TextView) findViewById(R.id.intro_title)).setText(getString(R.string.link_to_m3u));
 
         // Sets the size and position of dialog activity.
         WindowManager.LayoutParams layoutParams = getWindow().getAttributes();

@@ -1,5 +1,5 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rich_setup_frag"
-    android:name="com.felkertech.cumulustv.tv.fragments.TifSetupFragment"
+    android:name="com.felkertech.cumulustv.tv.tvinputservice.TvInputServiceSetupFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

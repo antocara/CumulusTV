@@ -8,8 +8,8 @@ import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.Until;
 
-import com.felkertech.cumulustv.tv.activities.LeanbackActivity;
-import com.felkertech.cumulustv.tv.fragments.LeanbackFragment;
+import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;
+import com.felkertech.cumulustv.tv.mainscreen.LeanbackFragment;
 
 import junit.framework.Assert;
 

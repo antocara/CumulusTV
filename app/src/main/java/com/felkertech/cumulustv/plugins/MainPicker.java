@@ -12,7 +12,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
@@ -40,7 +39,6 @@ import com.felkertech.cumulustv.utils.AppUtils;
 import com.felkertech.cumulustv.utils.PermissionUtils;
 import com.felkertech.n.cumulustv.R;
 import com.felkertech.settingsmanager.common.CommaArray;
-import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.media.tv.companionlibrary.TvPlayer;
 
 import org.json.JSONException;
@@ -48,7 +46,6 @@ import org.json.JSONException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -693,7 +690,7 @@ public class MainPicker extends CumulusTvPlugin {
             mContext = context;
             mIsNewChannel = isNewChannel;
 
-            ((TextView) findViewById(R.id.title)).setText(isNewChannel ?
+            ((TextView) findViewById(R.id.intro_title)).setText(isNewChannel ?
                     context.getString(R.string.manage_add_new) :
                     context.getString(R.string.edit_channel));
             if (isNewChannel) {

@@ -4,7 +4,7 @@
     android:layout_height="110dp">
     <ImageView
         android:layout_width="110dp"
-        android:src="@drawable/c_banner_3_2"
+        android:src="@drawable/image_intro_1"
         android:id="@+id/widget_image"
         android:scaleType="centerCrop"
         android:layout_height="92dp" />

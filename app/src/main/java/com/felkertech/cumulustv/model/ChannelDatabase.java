@@ -602,7 +602,7 @@ public class ChannelDatabase {
             return jsonChannel.getLogo();
         }
         return "https://raw.githubusercontent.com/Fleker/CumulusTV/master/app/src/main/res/drawab" +
-                "le-xhdpi/c_banner_3_2.jpg";
+                "le-xhdpi/image_intro_1.jpgg";
     }
 
     public static class MalformedChannelDataException extends RuntimeException {

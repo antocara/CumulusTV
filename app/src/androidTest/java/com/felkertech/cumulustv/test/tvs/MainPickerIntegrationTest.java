@@ -8,7 +8,7 @@ import android.test.ActivityInstrumentationTestCase2;
 
 import com.felkertech.cumulustv.model.ChannelDatabase;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
-import com.felkertech.cumulustv.tv.activities.LeanbackActivity;
+import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;
 import com.felkertech.cumulustv.utils.ActivityUtils;
 
 import org.json.JSONException;
