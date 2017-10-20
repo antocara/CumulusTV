@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.activities;
+package com.felkertech.cumulustv.settings;
 
 import android.app.Activity;
 import android.os.Bundle;

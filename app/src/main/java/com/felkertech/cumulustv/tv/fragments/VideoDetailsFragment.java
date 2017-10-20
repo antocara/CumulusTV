@@ -22,11 +22,11 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.bumptech.glide.Glide;
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
 import com.felkertech.cumulustv.mainscreen.MainActivity;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.felkertech.cumulustv.tv.Utils;
 import com.felkertech.cumulustv.tv.activities.DetailsActivity;
 import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
 import android.support.v4.util.Pair;
@@ -24,7 +23,7 @@ import com.felkertech.cumulustv.fileio.HttpFileParser;
 import com.felkertech.cumulustv.fileio.LocalFileParser;
 import com.felkertech.cumulustv.fileio.M3uParser;
 import com.felkertech.cumulustv.fileio.CumulusXmlParser;
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
 import com.felkertech.n.cumulustv.R;
 
 import java.io.FileNotFoundException;

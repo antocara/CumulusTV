@@ -6,8 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.felkertech.cumulustv.model.RecyclerViewItem;
-import com.felkertech.cumulustv.tv.activities.PlaybackQuickSettingsActivity;
+import com.felkertech.cumulustv.data.model.RecyclerViewItem;
 import com.felkertech.n.cumulustv.R;
 
 /**

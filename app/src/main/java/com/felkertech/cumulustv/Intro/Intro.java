@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import com.felkertech.cumulustv.managers.NavigationManager;
-import com.felkertech.cumulustv.utils.ActivityUtils;
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.DriveSettingsManager;
 import com.felkertech.n.cumulustv.R;
 import com.github.paolorotolo.appintro.AppIntro;
 

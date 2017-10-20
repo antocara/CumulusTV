@@ -3,7 +3,7 @@ package com.felkertech.cumulustv.fileio;
 import android.app.Activity;
 import android.util.Log;
 
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
 import com.felkertech.settingsmanager.SettingsManager;
 import com.google.android.gms.common.api.GoogleApiClient;

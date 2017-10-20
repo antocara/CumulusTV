@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.utils;
+package com.felkertech.cumulustv.commons.helper;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -7,7 +7,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
 import com.felkertech.settingsmanager.SettingsManager;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;

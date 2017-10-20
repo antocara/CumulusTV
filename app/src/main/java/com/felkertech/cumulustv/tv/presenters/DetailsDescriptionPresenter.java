@@ -2,7 +2,7 @@ package com.felkertech.cumulustv.tv.presenters;
 
 import android.support.v17.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 
 public class DetailsDescriptionPresenter extends AbstractDetailsDescriptionPresenter {
 

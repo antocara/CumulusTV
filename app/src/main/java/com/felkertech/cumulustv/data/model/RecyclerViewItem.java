@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.model;
+package com.felkertech.cumulustv.data.model;
 
 /**
  * An abstract class which exists to display an option inside of a RecyclerView.

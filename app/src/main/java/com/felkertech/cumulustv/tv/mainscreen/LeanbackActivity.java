@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import com.felkertech.cumulustv.fileio.CloudStorageProvider;
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;

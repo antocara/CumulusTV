@@ -3,7 +3,6 @@ package com.felkertech.cumulustv.commons.helper;
 import android.Manifest;
 import android.app.Activity;
 import android.os.Build;
-import com.felkertech.cumulustv.utils.ActivityUtils;
 
 import static android.content.pm.PackageManager.PERMISSION_DENIED;
 

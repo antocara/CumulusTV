@@ -3,14 +3,13 @@ package com.felkertech.cumulustv.test;
 import android.content.ComponentName;
 import android.database.Cursor;
 import android.media.tv.TvContract;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.felkertech.cumulustv.mainscreen.MainActivity;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
-import com.felkertech.cumulustv.fileio.XmlTvParser;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
+
 import com.felkertech.cumulustv.services.CumulusJobService;
 import com.google.android.media.tv.companionlibrary.model.Program;
 

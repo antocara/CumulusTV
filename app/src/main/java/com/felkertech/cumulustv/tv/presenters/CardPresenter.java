@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.n.cumulustv.R;
 

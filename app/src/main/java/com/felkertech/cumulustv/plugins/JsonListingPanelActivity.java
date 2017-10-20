@@ -19,11 +19,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.ChannelDatabaseFactory;
-import com.felkertech.cumulustv.model.JsonChannel;
-import com.felkertech.cumulustv.model.JsonListing;
-import com.felkertech.cumulustv.model.RecyclerViewItem;
+import com.felkertech.cumulustv.addurlchannels.AddUrlSourceChannelsPlugin;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.ChannelDatabaseFactory;
+import com.felkertech.cumulustv.data.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.JsonListing;
+import com.felkertech.cumulustv.data.model.RecyclerViewItem;
 import com.felkertech.cumulustv.ui.RecyclerViewColumnAdapter;
 import com.felkertech.n.cumulustv.R;
 
@@ -147,7 +148,7 @@ public class JsonListingPanelActivity extends Activity {
             items[0] = new RecyclerViewItem(getString(R.string.add_new_link)) {
                 @Override
                 public void onClick() {
-                    Intent i = new Intent(JsonListingPanelActivity.this, ListingPlugin.class);
+                    Intent i = new Intent(JsonListingPanelActivity.this, AddUrlSourceChannelsPlugin.class);
                     i.putExtra(CumulusTvPlugin.INTENT_EXTRA_ACTION, CumulusTvPlugin.INTENT_ADD);
                     startActivity(i);
                 }

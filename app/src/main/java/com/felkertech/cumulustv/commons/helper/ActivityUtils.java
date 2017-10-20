@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.utils;
+package com.felkertech.cumulustv.commons.helper;
 
 import android.Manifest;
 import android.app.Activity;
@@ -25,8 +25,8 @@ import com.felkertech.cumulustv.activities.CumulusVideoPlayback;
 import com.felkertech.cumulustv.activities.HomepageWebViewActivity;
 import com.felkertech.cumulustv.mainscreen.MainActivity;
 import com.felkertech.cumulustv.fileio.CloudStorageProvider;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.cumulustv.plugins.CumulusTvPlugin;
 import com.felkertech.cumulustv.receivers.GoogleDriveBroadcastReceiver;
@@ -48,11 +48,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONException;
 
-import static com.felkertech.cumulustv.model.SuggestedChannels.getSuggestedChannels;
+import static com.felkertech.cumulustv.data.model.SuggestedChannels.getSuggestedChannels;
 
-/**
- * Created by guest1 on 10/29/2015.
- */
 public class ActivityUtils {
   private static final String TAG = ActivityUtils.class.getSimpleName();
   private static final boolean DEBUG = false;
@@ -93,9 +90,7 @@ public class ActivityUtils {
 
   public static void addChannel(final Activity activity, GoogleApiClient gapi,
       CumulusChannel jsonChannel) {
-    if (DEBUG) {
-      Log.d(TAG, "I've been told to add " + jsonChannel.toString());
-    }
+
     ChannelDatabase cd = ChannelDatabase.getInstance(activity);
     if (cd.channelExists(jsonChannel)) {
       Toast.makeText(activity, R.string.channel_dupe, Toast.LENGTH_SHORT).show();
@@ -112,9 +107,6 @@ public class ActivityUtils {
         }
         GoogleDriveBroadcastReceiver.changeStatus(activity,
             GoogleDriveBroadcastReceiver.EVENT_DOWNLOAD_COMPLETE);
-        if (DEBUG) {
-          Log.d(TAG, "Added");
-        }
       } catch (JSONException e) {
         e.printStackTrace();
       }
@@ -149,7 +141,7 @@ public class ActivityUtils {
         Intent intent = new Intent();
         intent.setComponent(jsonChannel.getPluginSource());
         intent.putExtra(CumulusTvPlugin.INTENT_EXTRA_ACTION, CumulusTvPlugin.INTENT_EDIT);
-        Log.d(TAG, "Editing channel " + jsonChannel.toString());
+
         intent.putExtra(CumulusTvPlugin.INTENT_EXTRA_JSON, jsonChannel.toString());
         activity.startActivity(intent);
       } catch (PackageManager.NameNotFoundException e) {
@@ -178,9 +170,7 @@ public class ActivityUtils {
         openPluginPicker(false, channelUrl, activity);
       }
     } else {
-      if (DEBUG) {
-        Log.d(TAG, "No specified source");
-      }
+
       openPluginPicker(false, channelUrl, activity);
     }
   }
@@ -321,9 +311,7 @@ public class ActivityUtils {
   }
 
   public static void syncFile(Activity activity, GoogleApiClient gapi) {
-    if (DEBUG) {
-      Log.d(TAG, "About to sync a file");
-    }
+
     if (gapi == null && mCloudStorageProvider.connect(activity) != null) {
       gapi = mCloudStorageProvider.connect(activity);
     } else if (mCloudStorageProvider.connect(activity) == null) {
@@ -336,17 +324,10 @@ public class ActivityUtils {
           .setMimeType(new String[] { "application/json", "text/*" })
           .build(gapi);
       try {
-        if (DEBUG) {
-          Log.d(TAG, "About to start activity");
-        }
+
         activity.startIntentSenderForResult(intentSender, REQUEST_CODE_OPENER, null, 0, 0, 0);
-        if (DEBUG) {
-          Log.d(TAG, "Activity activated");
-        }
       } catch (IntentSender.SendIntentException e) {
-        if (DEBUG) {
-          Log.w(TAG, "Unable to send intent", e);
-        }
+
         e.printStackTrace();
       }
     } else {
@@ -404,24 +385,15 @@ public class ActivityUtils {
     if (plugin_names.size() == 1) {
       Intent intent = new Intent();
       if (newChannel) {
-        if (DEBUG) {
-          Log.d(TAG, "Try to start ");
-        }
+
         ResolveInfo plugin_info = plugins.get(0);
-        if (DEBUG) {
-          Log.d(TAG, plugin_info.activityInfo.applicationInfo.packageName
-              + " "
-              + plugin_info.activityInfo.name);
-        }
 
         intent.setClassName(plugin_info.activityInfo.applicationInfo.packageName,
             plugin_info.activityInfo.name);
         intent.putExtra(CumulusTvPlugin.INTENT_EXTRA_ACTION, CumulusTvPlugin.INTENT_ADD);
       } else {
         ResolveInfo plugin_info = plugins.get(0);
-        Log.d(TAG, plugin_info.activityInfo.applicationInfo.packageName
-            + " "
-            + plugin_info.activityInfo.name);
+
         intent.setClassName(plugin_info.activityInfo.applicationInfo.packageName,
             plugin_info.activityInfo.name);
         intent.putExtra(CumulusTvPlugin.INTENT_EXTRA_ACTION, CumulusTvPlugin.INTENT_EDIT);
@@ -436,15 +408,8 @@ public class ActivityUtils {
             @Override public void onClick(DialogInterface dialog, int which) {
               Intent intent = new Intent();
               if (newChannel) {
-                if (DEBUG) {
-                  Log.d(TAG, "Try to start");
-                }
+
                 ResolveInfo plugin_info = plugins.get(which);
-                if (DEBUG) {
-                  Log.d(TAG, plugin_info.activityInfo.applicationInfo.packageName
-                      + " "
-                      + plugin_info.activityInfo.name);
-                }
 
                 intent.setClassName(plugin_info.activityInfo.applicationInfo.packageName,
                     plugin_info.activityInfo.name);
@@ -481,13 +446,8 @@ public class ActivityUtils {
         ChannelDatabase cd = ChannelDatabase.getInstance(activity);
         String s = cd.toString();
         Intent intent = new Intent();
-        if (DEBUG) {
-          Log.d(TAG, "Try to start");
-        }
+
         ResolveInfo plugin_info = plugins.get(i);
-        Log.d(TAG, plugin_info.activityInfo.applicationInfo.packageName
-            + " "
-            + plugin_info.activityInfo.name);
 
         intent.setClassName(plugin_info.activityInfo.applicationInfo.packageName,
             plugin_info.activityInfo.name);
@@ -524,14 +484,10 @@ public class ActivityUtils {
     switch (requestCode) {
       case RESOLVE_CONNECTION_REQUEST_CODE:
         if (resultCode == Activity.RESULT_OK) {
-          if (DEBUG) {
-            Log.d(TAG, "App connect +1");
-          }
+
           gapi.connect();
         } else {
-          if (DEBUG) {
-            Log.d(TAG, "App cannot connect");
-          }
+
           final GoogleApiClient finalGapi = gapi;
           new AlertDialog.Builder(activity).setTitle(R.string.connection_issue_title)
               .setMessage(R.string.connection_issue_description)
@@ -550,13 +506,7 @@ public class ActivityUtils {
           return;
         }
         DriveId driveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
-        if (DEBUG) {
-          Log.d(TAG, driveId.encodeToString()
-              + ", "
-              + driveId.getResourceId()
-              + ", "
-              + driveId.toInvariantString());
-        }
+
         sm.setString(R.string.sm_google_drive_id, driveId.encodeToString());
 
         DriveFile file =
@@ -569,13 +519,7 @@ public class ActivityUtils {
           return;
         }
         driveId = data.getParcelableExtra(OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID);
-        if (DEBUG) {
-          Log.d(TAG, driveId.encodeToString()
-              + ", "
-              + driveId.getResourceId()
-              + ", "
-              + driveId.toInvariantString());
-        }
+
         sm.setString(R.string.sm_google_drive_id, driveId.encodeToString());
         final GoogleApiClient finalGapi1 = gapi;
         new AlertDialog.Builder(activity).setTitle(R.string.sync_initial)
@@ -649,8 +593,7 @@ public class ActivityUtils {
   public static void handleMalformedChannelData(final Activity activity,
       final GoogleApiClient googleApiClient, ChannelDatabase.MalformedChannelDataException e) {
 
-    new AlertDialog.Builder(activity)
-        .setTitle(R.string.chdb_issue_title)
+    new AlertDialog.Builder(activity).setTitle(R.string.chdb_issue_title)
         .setMessage(activity.getString(R.string.chdb_issue_info, e.getMessage()))
         .setPositiveButton(R.string.action_clear_local_data, new DialogInterface.OnClickListener() {
           @Override public void onClick(DialogInterface dialogInterface, int i) {
@@ -670,23 +613,21 @@ public class ActivityUtils {
     File dir = Environment.getExternalStorageDirectory();
     File userM3u = new File(dir.toString() + "/" + "cumulus_channels.m3u");
     int index = 0;
-    Log.d(TAG, "Searching for viable file");
+
     while (userM3u.exists()) {
       userM3u = new File(dir.toString() + "/" + "cumulus_channels_" + index + ".m3u");
-      Log.d(TAG, "Trying " + userM3u.getName());
+
       index++;
     }
-    if (!dir.exists()) {
-      Log.d(TAG, "Make directory? " + dir.mkdir());
-    }
+
     try {
-      Log.d(TAG, "To create: " + userM3u.getAbsolutePath());
+
       FileOutputStream out = new FileOutputStream(userM3u);
-      Log.d(TAG, "Starting to write out data");
+
       out.write(ChannelDatabase.getInstance(activity).toM3u().getBytes());
       out.flush();
       out.close();
-      Log.d(TAG, "Data written to " + userM3u.getAbsolutePath());
+
       Toast.makeText(activity, "M3U Playlist written to " + userM3u.getCanonicalPath(),
           Toast.LENGTH_SHORT).show();
     } catch (IOException e) {

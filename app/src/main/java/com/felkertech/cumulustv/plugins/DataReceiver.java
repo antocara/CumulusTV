@@ -6,21 +6,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.tv.TvContract;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.felkertech.cumulustv.model.ChannelDatabaseFactory;
-import com.felkertech.cumulustv.model.JsonListing;
-import com.felkertech.cumulustv.receivers.GoogleDriveBroadcastReceiver;
+import com.felkertech.cumulustv.data.model.ChannelDatabaseFactory;
+import com.felkertech.cumulustv.data.model.JsonListing;
 import com.felkertech.cumulustv.services.CumulusJobService;
-import com.felkertech.cumulustv.utils.ActivityUtils;
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.DriveSettingsManager;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.drive.Drive;
-import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,9 +45,7 @@ public class DataReceiver extends BroadcastReceiver
                 .addOnConnectionFailedListener(this)
                 .build();
 
-        if (DEBUG) {
-            Log.d(TAG, "Received a message");
-        }
+
         if(intent != null) {
             String action = intent.getStringExtra(CumulusTvPlugin.INTENT_EXTRA_ACTION);
             String jsonString = "";

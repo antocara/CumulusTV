@@ -1,6 +1,5 @@
-package com.felkertech.cumulustv.model;
+package com.felkertech.cumulustv.data.model;
 
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,15 +10,12 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.felkertech.cumulustv.fileio.AbstractFileParser;
-import com.felkertech.cumulustv.fileio.FileParserFactory;
 import com.felkertech.cumulustv.fileio.HttpFileParser;
 import com.felkertech.cumulustv.fileio.M3uParser;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.cumulustv.plugins.JsonContainer;
-import com.felkertech.cumulustv.receivers.GoogleDriveBroadcastReceiver;
-import com.felkertech.cumulustv.services.CumulusJobService;
-import com.felkertech.cumulustv.utils.ActivityUtils;
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.DriveSettingsManager;
 import com.felkertech.settingsmanager.SettingsManager;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 import com.google.android.media.tv.companionlibrary.model.InternalProviderData;

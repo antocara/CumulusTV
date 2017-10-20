@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import com.felkertech.cumulustv.mainscreen.MainActivity;
 import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;
-import com.felkertech.cumulustv.utils.AppUtils;
+import com.felkertech.cumulustv.commons.helper.AppUtils;
 
 public class NavigationManager {
 

@@ -6,10 +6,10 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.felkertech.cumulustv.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 
 import org.json.JSONException;
 import org.junit.After;

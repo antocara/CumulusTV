@@ -1,16 +1,14 @@
 package com.felkertech.cumulustv.services;
 
 import android.annotation.TargetApi;
-import android.net.Uri;
 import android.os.Build;
 import android.service.dreams.DreamService;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.widget.TextView;
 
-import com.felkertech.cumulustv.player.CumulusTvPlayer;
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.utils.DriveSettingsManager;
+import com.felkertech.cumulustv.commons.helper.DriveSettingsManager;
 import com.felkertech.cumulustv.activities.CumulusDreamsSettingsActivity;
 
 /**

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/c_background5"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:id="@+id/intro_title"
+      android:layout_width="640dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:background="@color/picker_background"
+      android:paddingBottom="16dp"
+      android:paddingEnd="32dp"
+      android:paddingStart="32dp"
+      android:paddingTop="16dp"
+      android:text="@string/link_to_m3u"
+      android:textSize="24sp"
+      />
+
+  <EditText
+      android:id="@+id/edit_url"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/m3u_url"
+      android:paddingBottom="16dp"
+      android:paddingEnd="32dp"
+      android:paddingStart="32dp"
+      android:paddingTop="16dp"
+      android:textSize="24sp"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        />
+
+    <TextView
+        android:id="@+id/channel_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/white"
+        />
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/picker_background"
+      android:paddingEnd="32dp"
+      android:paddingStart="32dp"
+      android:paddingTop="16dp"
+      android:text="A JsonListing is simply a URL which points to an M3U Playlist. Instead of importing the file once, the app will download and import the channels every time."
+      android:textColor="@color/white"
+      />
+</LinearLayout>

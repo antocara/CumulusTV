@@ -2,7 +2,7 @@ package com.felkertech.cumulustv.fileio;
 
 import android.util.Log;
 
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 import static com.felkertech.cumulustv.fileio.M3uParser.Constants.CH_AUDIO_ONLY;
 import static com.felkertech.cumulustv.fileio.M3uParser.Constants.CH_EPG_URL;

@@ -11,10 +11,10 @@ import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 import com.felkertech.cumulustv.mainscreen.MainActivity;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 
 import org.json.JSONException;

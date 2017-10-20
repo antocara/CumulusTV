@@ -8,9 +8,6 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by guest1 on 8/7/2015.
- */
 public abstract class CumulusTvPlugin extends AppCompatActivity {
     private static final String TAG = CumulusTvPlugin.class.getSimpleName();
     private static final boolean DEBUG = true;
@@ -96,11 +93,6 @@ public abstract class CumulusTvPlugin extends AppCompatActivity {
             i.putExtra(INTENT_EXTRA_SOURCE, "");
         }
         i.putExtra(INTENT_EXTRA_ACTION, INTENT_EXTRA_ACTION_WRITE);
-        if (DEBUG) {
-            Log.d(TAG, "   :");
-            Log.d(TAG, container.toString());
-            Log.d(TAG, "Saving changes");
-        }
         sendBroadcast(i);
         finish();
     }

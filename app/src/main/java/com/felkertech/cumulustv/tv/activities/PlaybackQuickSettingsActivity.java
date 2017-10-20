@@ -14,12 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.felkertech.cumulustv.managers.NavigationManager;
-import com.felkertech.cumulustv.model.RecyclerViewItem;
+import com.felkertech.cumulustv.data.model.RecyclerViewItem;
 import com.felkertech.cumulustv.ui.RecyclerViewColumnAdapter;
-import com.felkertech.cumulustv.utils.ActivityUtils;
+import com.felkertech.cumulustv.commons.helper.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
 import com.felkertech.cumulustv.exceptions.PlaybackIssueException;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 
 import org.json.JSONException;
 

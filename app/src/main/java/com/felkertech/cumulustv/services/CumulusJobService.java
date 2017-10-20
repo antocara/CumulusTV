@@ -17,13 +17,12 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.felkertech.cumulustv.fileio.CumulusXmlParser;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.felkertech.cumulustv.tv.activities.PlaybackQuickSettingsActivity;
-import com.felkertech.cumulustv.utils.AppUtils;
+import com.felkertech.cumulustv.commons.helper.AppUtils;
 import com.felkertech.n.cumulustv.R;
 import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
-import com.google.android.media.tv.companionlibrary.XmlTvParser;
 import com.google.android.media.tv.companionlibrary.model.Advertisement;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 import com.google.android.media.tv.companionlibrary.model.InternalProviderData;

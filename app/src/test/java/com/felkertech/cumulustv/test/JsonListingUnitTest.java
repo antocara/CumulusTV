@@ -2,7 +2,7 @@ package com.felkertech.cumulustv.test;
 
 import android.os.Build;
 
-import com.felkertech.cumulustv.model.JsonListing;
+import com.felkertech.cumulustv.data.model.JsonListing;
 import com.felkertech.n.cumulustv.BuildConfig;
 
 import junit.framework.TestCase;

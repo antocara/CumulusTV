@@ -3,12 +3,12 @@ package com.felkertech.cumulustv.test;
 import android.os.Build;
 import android.util.Log;
 
-import com.felkertech.cumulustv.model.JsonListing;
+import com.felkertech.cumulustv.data.model.JsonListing;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.n.cumulustv.BuildConfig;
 import com.felkertech.cumulustv.MockChannelDatabase;
-import com.felkertech.cumulustv.model.ChannelDatabase;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.ChannelDatabase;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.felkertech.settingsmanager.SettingsManager;
 
 import junit.framework.TestCase;

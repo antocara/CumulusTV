@@ -4,7 +4,7 @@ import android.os.Build;
 
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.n.cumulustv.BuildConfig;
-import com.felkertech.cumulustv.model.JsonChannel;
+import com.felkertech.cumulustv.data.model.JsonChannel;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 
 import junit.framework.TestCase;

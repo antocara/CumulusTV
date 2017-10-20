@@ -1,12 +1,12 @@
-package com.felkertech.cumulustv.model;
+package com.felkertech.cumulustv.data.model;
 
 import com.felkertech.cumulustv.plugins.JsonContainer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.felkertech.cumulustv.model.ChannelDatabaseFactory.KEY_TYPE;
-import static com.felkertech.cumulustv.model.ChannelDatabaseFactory.TYPE_JSON_LISTING;
+import static com.felkertech.cumulustv.data.model.ChannelDatabaseFactory.KEY_TYPE;
+import static com.felkertech.cumulustv.data.model.ChannelDatabaseFactory.TYPE_JSON_LISTING;
 
 /**
  * A type of data structure that simply links to a Url. This Url can be an M3U playlist which is

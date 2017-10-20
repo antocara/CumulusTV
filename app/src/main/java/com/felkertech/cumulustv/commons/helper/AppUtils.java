@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.utils;
+package com.felkertech.cumulustv.commons.helper;
 
 import android.app.UiModeManager;
 import android.content.Context;

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.model.Option;
+import com.felkertech.cumulustv.data.model.Option;
 
 /**
  * A presenter which can be used to show options with an optional title along the bottom.

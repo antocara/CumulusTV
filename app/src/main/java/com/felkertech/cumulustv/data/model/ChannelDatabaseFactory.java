@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.model;
+package com.felkertech.cumulustv.data.model;
 
 import android.util.Log;
 
