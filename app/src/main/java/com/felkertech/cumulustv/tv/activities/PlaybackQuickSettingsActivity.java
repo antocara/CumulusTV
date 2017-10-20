@@ -3,7 +3,6 @@ package com.felkertech.cumulustv.tv.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.icu.util.RangeValueIterator;
 import android.os.Bundle;
 import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v7.widget.RecyclerView;
@@ -48,7 +47,7 @@ public class PlaybackQuickSettingsActivity extends Activity {
                     .getStringExtra(EXTRA_JSON_CHANNEL)).build();
 
             // Set the title
-            ((TextView) findViewById(R.id.title)).setText(jsonChannel.getName());
+            ((TextView) findViewById(R.id.intro_title)).setText(jsonChannel.getName());
 
             // Open this channel in the editor
             quickSettings[0] = new RecyclerViewItem(

@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view_intro"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5C6BC0"
     android:layout_weight="10"
-    android:id="@+id/main">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    >
 
-    <TextView
-        style="@style/intro_title"
-        android:id="@+id/title"
-        android:text="View Local Weather"/>
-    <TextView
-        style="@style/intro_summary"
-        android:id="@+id/description"
-        android:text="Weather Delta uses your location to get weather right where you're standing."/>
+  <TextView
+      android:id="@+id/intro_title"
+      tools:text="View Local Weather"
+      style="@style/intro_title"
+      />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_marginTop="64dp"
-        android:gravity="center"
-        android:layout_weight="5">
+  <TextView
+      android:id="@+id/intro_description"
+      tools:text="Weather Delta uses your location to get weather right where you're standing."
+      style="@style/intro_summary"
+      />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:id="@+id/image"
-            android:src="@mipmap/ic_launcher"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="64dp" />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="64dp"
+      android:layout_weight="5"
+      android:gravity="center"
+      android:orientation="vertical"
+      >
+
+    <ImageView
+        android:id="@+id/intro_image"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:src="@mipmap/ic_launcher"
+        />
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="64dp"
+      />
 </LinearLayout>

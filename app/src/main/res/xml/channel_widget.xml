@@ -3,7 +3,7 @@
     android:minWidth="110dp"
     android:minHeight="80dp"
     android:updatePeriodMillis="864000"
-    android:previewImage="@drawable/c_banner_3_2"
+    android:previewImage="@drawable/image_intro_1"
     android:initialLayout="@layout/widget_channel"
     android:configure="com.felkertech.cumulustv.activities.WidgetSelectionActivity"
     android:resizeMode="horizontal|vertical"

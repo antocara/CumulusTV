@@ -17,7 +17,6 @@ import com.felkertech.cumulustv.model.ChannelDatabase;
 import com.felkertech.cumulustv.plugins.CumulusChannel;
 import com.felkertech.n.cumulustv.R;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 /*
@@ -64,7 +63,7 @@ public class CardPresenter extends Presenter {
         cardView.setContentText(jsonChannel.getNumber());
         cardView.setMainImageDimensions(CARD_WIDTH, CARD_HEIGHT);
         if (jsonChannel.getLogo() == null || jsonChannel.getLogo().isEmpty()) {
-            cardView.setMainImage(mContext.getResources().getDrawable(R.drawable.c_banner_3_2));
+            cardView.setMainImage(mContext.getResources().getDrawable(R.drawable.image_intro_1));
             cardView.findViewById(R.id.info_field)
                     .setBackgroundColor(mContext.getResources().getColor(R.color.colorPrimaryDark));
         } else {
@@ -75,7 +74,7 @@ public class CardPresenter extends Presenter {
                         final Bitmap logo = Glide.with(mContext)
                                 .load(ChannelDatabase.getNonNullChannelLogo(jsonChannel))
                                 .asBitmap()
-                                .error(R.drawable.c_banner_3_2)
+                                .error(R.drawable.image_intro_1)
                                 .fitCenter()
                                 .into(CARD_WIDTH, CARD_HEIGHT)
                                 .get();

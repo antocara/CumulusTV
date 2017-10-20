@@ -12,7 +12,7 @@
         android:layout_marginTop="32dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:id="@+id/title"
+        android:id="@+id/intro_title"
         android:text="@string/link_to_m3u"
         android:background="@color/picker_background"
         android:layout_height="wrap_content" />

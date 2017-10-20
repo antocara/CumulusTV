@@ -20,7 +20,6 @@ import com.felkertech.cumulustv.activities.CumulusVideoPlayback;
 import com.felkertech.cumulustv.activities.WidgetSelectionActivity;
 import com.felkertech.cumulustv.model.JsonChannel;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -87,7 +86,7 @@ public class ChannelShortcut extends AppWidgetProvider {
                     final Bitmap logo = Glide.with(context)
                             .load(ChannelDatabase.getNonNullChannelLogo(channel))
                             .asBitmap()
-                            .placeholder(R.drawable.c_banner_3_2)
+                            .placeholder(R.drawable.image_intro_1)
                             .into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
                             .get();
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
