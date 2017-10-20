@@ -24,12 +24,12 @@ import android.util.Log;
 import com.bumptech.glide.Glide;
 import com.felkertech.cumulustv.utils.ActivityUtils;
 import com.felkertech.n.cumulustv.R;
-import com.felkertech.cumulustv.activities.MainActivity;
+import com.felkertech.cumulustv.mainscreen.MainActivity;
 import com.felkertech.cumulustv.model.ChannelDatabase;
 import com.felkertech.cumulustv.model.JsonChannel;
 import com.felkertech.cumulustv.tv.Utils;
 import com.felkertech.cumulustv.tv.activities.DetailsActivity;
-import com.felkertech.cumulustv.tv.activities.LeanbackActivity;
+import com.felkertech.cumulustv.tv.mainscreen.LeanbackActivity;
 import com.felkertech.cumulustv.tv.presenters.DetailsDescriptionPresenter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -37,7 +37,6 @@ import com.google.android.gms.drive.Drive;
 
 import org.json.JSONException;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 /*

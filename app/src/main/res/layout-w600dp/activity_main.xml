@@ -29,32 +29,32 @@
         android:fontFamily="sans-serif"
         android:textSize="18sp"
         style="@style/main_button"
-        android:id="@+id/view"
+        android:id="@+id/btn_all_channels"
         android:layout_below="@+id/add" />
     <Button android:text="Categories" android:layout_width="180dp"
         android:layout_height="60dp"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
-        android:layout_toRightOf="@id/view"
+        android:layout_toRightOf="@id/btn_all_channels"
         android:layout_below="@id/suggested"
         style="@style/main_button"
-        android:id="@+id/view_genres"/>
+        android:id="@+id/btn_categories"/>
     <Button android:text="Sync files with Google Drive" android:layout_width="180dp"
         android:minHeight="60dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
-        android:layout_below="@+id/view"
+        android:layout_below="@+id/btn_all_channels"
         style="@style/main_button"
-        android:id="@+id/gdrive"/>
+        android:id="@+id/btn_drive"/>
     <Button android:text="More..." android:layout_width="180dp"
         android:layout_height="60dp"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
-        android:layout_toRightOf="@id/gdrive"
-        android:layout_below="@id/view_genres"
+        android:layout_toRightOf="@id/btn_drive"
+        android:layout_below="@id/btn_categories"
         style="@style/main_button"
-        android:id="@+id/more_actions"/>
+        android:id="@+id/btn_more_actions"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

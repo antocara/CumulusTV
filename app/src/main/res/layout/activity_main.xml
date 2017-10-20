@@ -1,43 +1,66 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.felkertech.cumulustv.activities.MainActivity">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/c_background5"/>
+    tools:context="com.felkertech.cumulustv.mainscreen.MainActivity"
+    >
 
-    <Button android:text="@string/my_channels" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        style="@style/main_button"
-        android:id="@+id/view"/>
-    <Button android:text="Categories" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        style="@style/main_button"
-        android:id="@+id/view_genres"/>
-    <Button android:text="Sync files with Google Drive" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_genres"
-        style="@style/main_button"
-        android:id="@+id/gdrive"/>
-    <Button android:text="More..." android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gdrive"
-        style="@style/main_button"
-        android:id="@+id/more_actions"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/artist"
-        style="@style/background_text_art"
-        android:text="Background art by Marcelo Franceschini"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/version"
-        android:text="Version 1.2.0"
-        style="@style/background_text_version"/>
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="centerCrop"
+      android:src="@drawable/c_background5"
+      />
+
+  <Button
+      android:id="@+id/btn_all_channels"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="112dp"
+      android:text="@string/my_channels"
+      style="@style/main_button"
+      />
+
+  <Button
+      android:id="@+id/btn_categories"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btn_all_channels"
+      android:text="Categories"
+      style="@style/main_button"
+      />
+
+  <Button
+      android:id="@+id/btn_drive"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btn_categories"
+      android:text="Sync files with Google Drive"
+      style="@style/main_button"
+      />
+
+  <Button
+      android:id="@+id/btn_more_actions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btn_drive"
+      android:text="More..."
+      style="@style/main_button"
+      />
+
+  <TextView
+      android:id="@+id/artist"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Background art by Marcelo Franceschini"
+      style="@style/background_text_art"
+      />
+
+  <TextView
+      android:id="@+id/version"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Version 1.2.0"
+      style="@style/background_text_version"
+      />
 </RelativeLayout>

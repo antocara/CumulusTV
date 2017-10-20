@@ -1,9 +1,9 @@
 package com.felkertech.cumulustv.Intro;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import com.felkertech.cumulustv.managers.NavigationManager;
 import com.felkertech.cumulustv.utils.ActivityUtils;
 import com.felkertech.cumulustv.utils.DriveSettingsManager;
 import com.felkertech.n.cumulustv.R;
@@ -25,13 +25,13 @@ public class Intro extends AppIntro {
   private void loadMainActivity() {
     DriveSettingsManager sm = new DriveSettingsManager(this);
     sm.setInt(R.string.sm_last_version, ActivityUtils.LAST_GOOD_BUILD);
-    Intent intent = new Intent(this, ActivityUtils.getMainActivity(this));
-    startActivity(intent);
+    NavigationManager.navigateToMainActivity(this);
   }
 
   @Override public void onSkipPressed(Fragment currentFragment) {
     super.onSkipPressed(currentFragment);
     // Do something when users tap on Skip button.
+    loadMainActivity();
   }
 
   @Override public void onDonePressed(Fragment currentFragment) {

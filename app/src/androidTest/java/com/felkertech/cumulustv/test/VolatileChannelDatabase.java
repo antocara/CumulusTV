@@ -78,7 +78,7 @@ public class VolatileChannelDatabase extends ChannelDatabase {
             public void run() {
                 ContentResolver contentResolver = context.getContentResolver();
                 Uri channelsUri = TvContract.buildChannelsUriForInput(
-                        "com.felkertech.cumulustv.tv.CumulusTvTifService");
+                        "com.felkertech.cumulustv.tv.tvinputservice.CumulusTvTifService");
                 Cursor cursor = contentResolver.query(channelsUri, null, null, null, null);
                 mDatabaseHashMap = new HashMap<>();
                 if (cursor != null) {

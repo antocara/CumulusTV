@@ -1,4 +1,4 @@
-package com.felkertech.cumulustv.tv;
+package com.felkertech.cumulustv.tv.tvinputservice;
 
 import android.annotation.TargetApi;
 import android.content.ComponentName;
